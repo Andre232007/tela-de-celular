@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computador</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(360deg, #35424a, #e0e0e0);
+            font-family: Arial, sans-serif;
+        }
+
+        .computador {
+            width: 80%;
+            max-width: 600px;
+            aspect-ratio: 3 / 2;
+            background: #0c0a0a;
+            border-radius: 15px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+            position: relative;
+            border: 5px solid #333;
+            overflow: hidden;
+            transition: transform 0.3s;
+        }
+     
+
+        .computador:hover {
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+        transition: box-shadow 0.3s;
+        }
+
+        .tela {
+            width: 100%;
+            height: 100%;
+            background-color: #111;
+            overflow: hidden;
+            display: none; 
+        }
+
+        .iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            border-radius: 10px;
+        }
+
+        .base {
+            width: 50%;
+            height: 20px; 
+            background: #0a0a0a; 
+            position: absolute;
+            bottom: -20px; 
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px; 
+        }
+
+        .computador:hover .base {
+            background-color: #444;
+        }
+
+        .botao-ligar {
+            position: absolute; 
+            top: 10px;
+            left: 10px; 
+            padding: 5px 10px;
+            background-color: #4CAF50; 
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 10; 
+        }
+
+        @media (max-width: 600px) {
+            .computador {
+                width: 100%;
+                max-width: 450px;
+                border-width: 4px;
+            }
+
+            .base {
+                width: 90px;
+                height: 90px;
+                bottom: -45px;
+            }
+
+            .botao-ligar {
+                font-size: 12px; 
+            }
+        }
+        .botao-ligar:hover {
+        background-color: #45a049;
+        transform: scale(1.05);
+        transition: background-color 0.3s, transform 0.3s;
+    }
+    </style>
+</head>
+<body>
+    
+    <div class="computador">
+        <button class="botao-ligar" onclick="ligarTela()">Ligar Tela</button>
+        <div class="tela" id="tela">
+            <iframe class="iframe" src="jogodavelha.html" title="Jogo da Velha"></iframe>
+        </div>
+        <div class="base"></div> 
+    </div>
+
+    <script>
+        function ligarTela() {
+            const tela = document.getElementById('tela');
+            if (tela.style.display === 'none') {
+                tela.style.display = 'block'; 
+            } else {
+                tela.style.display = 'none'; 
+            }
+        }
+    </script>
+</body>
+</html>

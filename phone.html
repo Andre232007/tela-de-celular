@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Simulação de tela de celular com ícones interativos">
+    <title>Tela do Celular</title>
+</head>
+<body>
+    
+    <div class="celular2">
+        <div class="celular">
+            <div class="tela">
+                <div class="icons">
+                    <div class="row">
+                        <div class="icone" onclick="window.location.href='jogodavelha.html'">
+                            <img src="Screenshot 2024-10-31 20.49.02.png" alt="Ícone Jogo da Velha">
+                            <p>Jogo </p>
+                        </div>
+                        <div class="icone" onclick="window.open('https://www.instagram.com/', '_blank')">
+                            <img src="Screenshot 2024-10-31 20.50.37.png" alt="Ícone Instagram">
+                            <p>Instagram</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="icone" onclick="window.open('https://www.whatsapp.com/?lang=pt_BR', '_blank')">
+                            <img src="Screenshot 2024-10-31 20.54.23.png" alt="Ícone WhatsApp">
+                            <p>WhatsApp</p>
+                        </div>
+                        <div class="icone" onclick="window.location.href='calculadora.html'">
+                            <img src="calculadora.png" alt="Ícone Calculadora">
+                            <p>Calculadora</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="botao" onclick="showIcons()"></div> 
+        </div>
+    </div>
+    <script>
+        function showIcons() {
+            const icons = document.querySelector('.icons');
+            icons.style.display = 'flex';
+        }
+    </script>
+</body>
+</html>

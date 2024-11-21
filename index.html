@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página Inicial</title>
+    <link rel="preload" href="caminho-da-imagem.jpg" as="image">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <meta name="description" content="Simulação de tela de celular com ícones interativos">
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(360deg, #35424a, #e0e0e0);
+            color: #fff;
+            overflow: hidden;
+        }
+
+        h1 {
+            color: #ffffff;
+            margin-bottom: 30px;
+            font-size: 2.5rem;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+       
+
+        .container {
+            display: flex;
+            justify-content: space-around;
+            width: 90%;
+            max-width: 900px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .imagem {
+            text-align: center;
+            margin: 20px;
+            position: relative;
+        }
+
+        .imagem img {
+            width: 250px;
+            height: 250px;
+            border-radius: 15px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+        }
+
+        .imagem:hover img {
+            transform: scale(1.08);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .legenda {
+            margin-top: 10px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: #fff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .imagem img {
+                width: 200px;
+                height: 200px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .legenda {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    
+    <h1>Escolha  um logo abaixo</h1>
+    <div class="container">
+        <div class="imagem">
+            <a href="pc.html" target="_blank"> 
+                <img src="woman-showing-laptop-screen.jpg" alt="Computador" loading="lazy">
+            </a>
+            <div class="legenda">PC</div>
+        </div>
+        <div class="imagem">
+            <a href="phone.html" target="_blank"> 
+                <img src="phone_14_01.jpg" alt="Celular" loading="lazy">
+            </a>
+            <div class="legenda">Celular</div>
+        </div>
+    </div>
+</body>
+</html>
